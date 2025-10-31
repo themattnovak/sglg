@@ -1,0 +1,150 @@
+<!-- Trigger Vercel redeploy -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SGLG Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --navy: #0b3e61;
+      --cream: #f2eee3;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--cream);
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .page-content {
+      flex: 1;
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo-section {
+      margin-bottom: 2rem;
+    }
+
+    .logo-image {
+      max-width: 300px;
+      height: auto;
+    }
+
+    .location {
+      color: var(--navy);
+      font-weight: 300;
+      letter-spacing: 1px;
+      margin: 0.5rem 0;
+    }
+
+    .services {
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: var(--navy);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 0.75rem;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    input, textarea {
+      padding: 0.75rem;
+      border: 1px solid var(--navy);
+      background-color: var(--cream);
+      color: var(--navy);
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      flex: 1;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    button {
+      padding: 1rem;
+      background-color: var(--navy);
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .icons {
+      padding-bottom: 20px;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .icons a {
+      color: var(--navy);
+      font-size: 2rem;
+      text-decoration: none;
+    }
+
+    @media (max-width: 500px) {
+      .form-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-content">
+    <div class="logo-section">
+      <img src="logo.png" alt="SGLG Logo" class="logo-image" />
+      <h1 class="location">CHARLESTON, S.C.</h1>
+      <p class="services">LANDSCAPING • SOD BROKERAGE • TURFGRASS CONSULTING</p>
+    </div>
+
+    <form>
+      <div class="form-row">
+        <input type="text" name="firstName" placeholder="First Name" required />
+        <input type="text" name="lastName" placeholder="Last Name" required />
+      </div>
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit">GET MORE INFO</button>
+    </form>
+  </div>
+
+  <div class="icons">
+    <a href="https://www.instagram.com/sodguychs" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="mailto:whit@sglgsod.com" aria-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+</body>
+</html>
