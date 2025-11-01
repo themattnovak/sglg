@@ -68,17 +68,19 @@
       color: var(--navy);
     }
 
-    form {
-      margin-top: 20px;
-      width: 100%;
-    }
+  form {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  align-self: center;
+}
 
-    .name-fields {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 15px;
-    }
+.name-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
 
 input, textarea {
   padding: 12px;
@@ -88,31 +90,30 @@ input, textarea {
   border-radius: 0;
   font-size: 16px;
   background-color: #f6f1e8;
+  box-sizing: border-box;
 }
 
-    button {
-      background-color: #0a2c3d;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      width: 100%;
-    }
+button {
+  background-color: #0a2c3d;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 0;
+  cursor: pointer;
+  width: 100%;
+}
 
-    /* Responsive layout for name fields */
-    @media (min-width: 600px) {
-      .name-fields {
-        flex-direction: row;
-        gap: 4%;
-      }
+/* Name fields side-by-side only on wider screens */
+@media (min-width: 600px) {
+  .name-fields {
+    flex-direction: row;
+  }
 
-      .name-fields input {
-        width: 48%;
-        margin-bottom: 0;
-      }
-    }
+  .name-fields input {
+    width: 48%;
+  }
+}
 
     .icons {
       padding-bottom: 80px;
