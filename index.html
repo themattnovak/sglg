@@ -66,14 +66,16 @@
     margin-top: 20px;
   }
 
+@media (min-width: 600px) {
   .name-fields {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .name-fields input {
-    width: 100%;
+    width: 48%;
+  }
+}
   }
 
   input, textarea {
