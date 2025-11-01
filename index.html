@@ -62,53 +62,53 @@
       color: var(--navy);
     }
 
-     form {
-    margin-top: 20px;
-  }
+    form {
+      margin-top: 20px;
+      width: 100%;
+    }
 
-@media (min-width: 600px) {
-  .name-fields {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .name-fields input {
-    width: 48%;
-  }
-}
-  }
-
-  input, textarea {
-    padding: 12px;
-    margin-bottom: 15px;
-    width: 100%;
-    border: 2px solid #0a2c3d;
-    border-radius: 6px;
-    font-size: 16px;
-    background-color: #f6f1e8;
-  }
-
-  button {
-    background-color: #0a2c3d;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 100%;
-  }
-
-  /* Media query for larger screens */
-  @media (min-width: 600px) {
     .name-fields {
-      flex-direction: row;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 15px;
     }
 
-    .name-fields input {
-      width: 48%;
+    input, textarea {
+      padding: 12px;
+      margin-bottom: 15px;
+      width: 100%;
+      border: 2px solid #0a2c3d;
+      border-radius: 6px;
+      font-size: 16px;
+      background-color: #f6f1e8;
+      box-sizing: border-box;
     }
-  }
+
+    button {
+      background-color: #0a2c3d;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    /* Responsive layout for name fields */
+    @media (min-width: 600px) {
+      .name-fields {
+        flex-direction: row;
+        gap: 4%;
+      }
+
+      .name-fields input {
+        width: 48%;
+        margin-bottom: 0;
+      }
+    }
+
     .icons {
       padding-bottom: 80px;
       display: flex;
@@ -121,33 +121,24 @@
       font-size: 2rem;
       text-decoration: none;
     }
-
-    @media (max-width: 500px) {
-      .form-row {
-        flex-direction: column;
-      }
-    }
   </style>
 </head>
 <body>
   <div class="page-content">
     <div class="logo-section">
       <img src="logo.png" alt="SGLG Logo" class="logo-image" />
-      
     </div>
 
     <form action="https://formspree.io/f/mvgvweko" method="POST">
-  <div class="name-fields">
-  <input type="text" name="first" placeholder="First Name" required>
-  <input type="text" name="last" placeholder="Last Name" required>
-  </div>
+      <div class="name-fields">
+        <input type="text" name="first" placeholder="First Name" required>
+        <input type="text" name="last" placeholder="Last Name" required>
+      </div>
 
-  <input type="email" id="email" name="email" placeholder="Email" required>
-
-  <textarea id="message" name="message" rows="5" placeholder="Leave Your Message" required></textarea>
-
-  <button type="submit">Send</button>
-</form>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <textarea id="message" name="message" rows="5" placeholder="Leave Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
   </div>
 
   <div class="icons">
