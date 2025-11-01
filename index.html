@@ -62,43 +62,51 @@
       color: var(--navy);
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      gap: 0.75rem;
+     form {
+    margin-top: 20px;
+  }
+
+  .name-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .name-fields input {
+    width: 100%;
+  }
+
+  input, textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 2px solid #0a2c3d;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #f6f1e8;
+  }
+
+  button {
+    background-color: #0a2c3d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  /* Media query for larger screens */
+  @media (min-width: 600px) {
+    .name-fields {
+      flex-direction: row;
     }
 
-    .form-row {
-      display: flex;
-      gap: 0.75rem;
+    .name-fields input {
+      width: 48%;
     }
-
-    input, textarea {
-      padding: 0.75rem;
-      border: 1px solid var(--navy);
-      background-color: var(--cream);
-      color: var(--navy);
-      font-family: 'Roboto', sans-serif;
-      font-size: 1rem;
-      flex: 1;
-    }
-
-    textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
-
-    button {
-      padding: 1rem;
-      background-color: var(--navy);
-      color: white;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
+  }
     .icons {
       padding-bottom: 80px;
       display: flex;
